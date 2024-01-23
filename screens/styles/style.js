@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
         fontWeight:'400',
         fontSize:18,
         lineHeight:27,
+        width:'100%'
         
     },
     DirectionImage:{

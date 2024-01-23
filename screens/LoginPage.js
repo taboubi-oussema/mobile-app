@@ -4,13 +4,13 @@ import stylesGlobal from "./styles/style";
 
 export default function LoginPage({ navigation }) {
   return (
-    <View style={{ marginHorizontal: 12 }}>
+    <View style={{ marginHorizontal: 12, flex: 1 }}>
       {/* Logo */}
       <View
         style={{
-          height: "54%",
           justifyContent: "center",
           alignItems: "center",
+          flex: 2,
         }}
       >
         <Image
@@ -31,7 +31,7 @@ export default function LoginPage({ navigation }) {
 
       {/* Botton */}
 
-      <View style={{ marginBottom: "4%" }}>
+      <View style={{ marginBottom: "4%", flex: 1, justifyContent: "center" }}>
         {/* Button google  */}
 
         <TouchableOpacity
@@ -64,7 +64,7 @@ export default function LoginPage({ navigation }) {
             <Image
               source={require("../assets/image/apple-logo.png")}
               style={{
-                marginRight: "8%",
+                marginRight: "6%",
                 width: 30,
                 height: 33,
                 marginHorizontal: "15%",
@@ -73,11 +73,6 @@ export default function LoginPage({ navigation }) {
             <Text style={stylesGlobal.TextInputStyle}>Continue with Apple</Text>
           </View>
         </TouchableOpacity>
-      </View>
-
-      {/*Sign in  Button */}
-
-      <View>
         <Text>
           --------------------------------------or------------------------------------------
         </Text>
@@ -103,6 +98,11 @@ export default function LoginPage({ navigation }) {
             Sign In with Password
           </Text>
         </TouchableOpacity>
+      </View>
+
+     
+
+      <View style={{ flex: 1 ,justifyContent:'center'}}>
         <Text
           style={{
             fontWeight: "500",
