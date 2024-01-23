@@ -17,11 +17,11 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen
+          {/* <Stack.Screen
             options={{ headerShown: false }}
             name="home"
             component={ResetPass}
-          />
+          /> */}
 
           <Stack.Screen
             options={{ headerShown: false }}
