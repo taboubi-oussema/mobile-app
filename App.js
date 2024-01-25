@@ -11,17 +11,18 @@ import Notifications from "./screens/Notifications";
 import ResetPass from "./screens/ResetPass";
 import ForgetPass from "./screens/ForgetPass";
 import VerifNumber from "./screens/VerifNumber";
+import Location from "./screens/Location";
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          {/* <Stack.Screen
-            options={{ headerShown: false }}
+          <Stack.Screen
             name="home"
-            component={ResetPass}
-          /> */}
+            component={Location}
+            options={{ headerTitle: "Set Your Location" ,headerTitleAlign:'center'}}
+          />
 
           <Stack.Screen
             options={{ headerShown: false }}
