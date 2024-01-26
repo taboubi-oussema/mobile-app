@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  Keyboard,
 } from "react-native";
 import {
   Foundation,
@@ -16,14 +17,17 @@ import stylesGlobal from "./styles/style";
 
 export default function SignUp({ navigation }) {
   return (
-    <ScrollView style={{ marginHorizontal: "5%" }}>
+    <ScrollView
+      keyboardShouldPersistTaps="handled"
+      style={{ marginHorizontal: "5%" }}
+    >
       {/* Logo */}
 
       <View
         style={{
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: "4%",
+          paddingTop: "14%",
           marginBottom: "8%",
         }}
       >
@@ -71,6 +75,7 @@ export default function SignUp({ navigation }) {
         <TextInput
           style={stylesGlobal.TextInputStyle}
           placeholder="Your Name"
+         
         />
       </View>
       <View style={{ marginBottom: 45 }}>
@@ -169,7 +174,7 @@ export default function SignUp({ navigation }) {
           style={{
             flexDirection: "row",
             alignItems: "center",
-            paddingTop: "10%",
+            paddingTop: "9%",
             justifyContent: "space-around",
             marginHorizontal: "15%",
           }}
@@ -197,7 +202,13 @@ export default function SignUp({ navigation }) {
 
       {/* Footer */}
 
-      <View style={{ alignItems: "center", justifyContent: "center" }}>
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: 40,
+        }}
+      >
         <Text
           style={{
             fontWeight: "500",

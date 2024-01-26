@@ -1,15 +1,15 @@
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image,TextInput } from "react-native";
 import React from "react";
 import stylesGlobal from "./styles/style";
 export default function Location() {
   return (
     <View style={{ flex: 1, marginHorizontal: "5%" }}>
       <View
-        style={{ flex:0.2, justifyContent: "center", alignItems: "center" }}
+        style={{ flex: 0.2, justifyContent: "center", alignItems: "center" }}
       ></View>
-      <View style={{ flex: 1}}>
+      <View style={{ flex: 1 }}>
         <Image
-          style={{ width: "100%", height: "100%" ,borderRadius:50}}
+          style={{ width: "100%", height: "100%", borderRadius: 50 }}
           source={require("../assets/image/image_10-removebg-preview.png")}
         />
       </View>
@@ -25,7 +25,7 @@ export default function Location() {
         >
           Title
         </Text>
-        <TouchableOpacity
+        <TextInput
           style={[
             stylesGlobal.ViewButton,
             {
@@ -33,7 +33,7 @@ export default function Location() {
               alignItems: "center",
             },
           ]}
-        ></TouchableOpacity>
+        ></TextInput>
         <Text
           style={{
             fontWeight: "400",
@@ -46,7 +46,7 @@ export default function Location() {
           Address
         </Text>
 
-        <TouchableOpacity
+        <TextInput
           style={[
             stylesGlobal.ViewButton,
             {
@@ -54,7 +54,7 @@ export default function Location() {
               alignItems: "center",
             },
           ]}
-        ></TouchableOpacity>
+        ></TextInput>
         <TouchableOpacity
           style={{ flexDirection: "row", alignItems: "center" }}
         >
@@ -108,3 +108,4 @@ export default function Location() {
     </View>
   );
 }
+

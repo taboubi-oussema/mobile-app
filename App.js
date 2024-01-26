@@ -1,6 +1,8 @@
+import 'react-native-gesture-handler'
 import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
+import { StatusBar } from "expo-status-bar";
 import LoginPage from "./screens/LoginPage";
 import SignIn from "./screens/SignIn";
 import SignUp from "./screens/SignUp";
@@ -14,14 +16,24 @@ import VerifNumber from "./screens/VerifNumber";
 import Location from "./screens/Location";
 export default function App() {
   const Stack = createNativeStackNavigator();
+  const Drawer = createDrawerNavigator();
   return (
     <>
+      <StatusBar style="auto" />
       <NavigationContainer>
+        {/* <Drawer.Navigator>
+          <Drawer.Screen name="feed" component={ForgetPass} />
+          <Drawer.Screen name="home" component={SignUp} />
+        </Drawer.Navigator> */}
         <Stack.Navigator>
           <Stack.Screen
             name="home"
-            component={Location}
-            options={{ headerTitle: "Set Your Location" ,headerTitleAlign:'center'}}
+            component={SignUp}
+            options={{
+              headerTitle: "Set Your Location",
+              headerTitleAlign: "center",
+              headerShown: false,
+            }}
           />
 
           <Stack.Screen
